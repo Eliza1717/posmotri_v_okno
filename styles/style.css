@@ -9,13 +9,15 @@ html {
 }
 
 .page {
-  overflow:  hidden;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   inline-size: 1200px;
+  block-size: 100%;
+  display: flex;
+  align-items: center;
 }
 
 h1,
@@ -189,14 +191,6 @@ input[type="checkbox"]:checked + span {
   cursor: pointer;
 }
 
-.content__details {
-  display: grid;
-  gap: 26px;
-  max-width: 398px;
-  inline-size: 100%;
-  block-size: 100%;
-}
-
 .title {
   color: #fff;
   font-family: Oswald, sans-serif;
@@ -206,12 +200,15 @@ input[type="checkbox"]:checked + span {
   text-transform: uppercase;
 }
 
+.content__details {
+  display: grid;
+  gap: 26px;
+  max-width: 398px;
+}
+
 .content {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;
   gap: 30px;
-  padding: 133px 30px;
 }
 
 .content__accent {
