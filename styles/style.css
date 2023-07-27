@@ -9,14 +9,14 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   inline-size: 1200px;
-  display: flex;
-  align-items: center;
 }
 
 h1,
@@ -208,9 +208,11 @@ input[type="checkbox"]:checked + span {
 }
 
 .content {
-  display: flex;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
-  margin: 133px 30px;
+  padding: 133px 30px;
 }
 
 .content__accent {
