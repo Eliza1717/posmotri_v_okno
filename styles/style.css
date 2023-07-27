@@ -39,24 +39,32 @@ ol {
 
 .content {
   display: flex;
+  gap: 30px;
   margin: 133px 30px;
 }
 
 .result {
+  display: grid;
+  align-self: flex-end;
 }
 
 .result__video-container {
+  position: relative;
   margin-bottom: 16px;
+  inline-size: 711px;
+  block-size: 386px;
 }
 
 .result__video {
-  width: 711px;
-  height: 386px;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .search-form__fieldset {
@@ -64,22 +72,21 @@ ol {
 }
 
 .search-form__fieldset-title {
-  flex-direction: column;
-  gap: 5px;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .search-form__label {
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  cursor: pointer;
 }
 
 .search-form__label-text {
-  width: 225px;
-  height: 27px;
-  align-items: center;
 }
 
 .visually-hidden {
@@ -93,31 +100,30 @@ ol {
 }
 
 .search-form__textfield {
+  width: 225px;
+  border: none;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 18px;
-  font-weight: 400;
   font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-size: 18px;
   background-color: transparent;
-  border-bottom: 1px solid #fff;
-  border-top:  1px solid #fff;
-}
-
-.search-form__fieldset {
 }
 
 .search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
 }
 
 .search-form__checkbox {
-  display: inline-block;
 }
 
 .search-form__pseudo-checkbox {
   display: inline-block;
   width: 19px;
   height: 19px;
-  background-color: transparent;
-  border: ;
+  background-color: #fff;
 }
 
 .button {
@@ -125,49 +131,123 @@ ol {
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   width: 194px;
   height: 34px;
-  margin-top: 20px;
   border: 1px solid #fff;
   background-color: transparent;
 }
 
 .search-form__submit-button {
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 700;
   font-size: 18px;
-  font-style: normal;
-  line-height: normal;
   text-align: center;
 }
 
 .content__details {
-  grid-gap: 30px;
+  display: grid;
+  gap: 26px;
+  inline-size: 100%;
+  block-size: 100%;
+  max-width: 398px;
 }
 
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
   font-size: 75px;
   font-style: normal;
-  font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
 }
 
 .content__accent {
   color: #545050;
-  font-family: Oswald;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 94%; /* 70.5px */
-  text-transform: uppercase;
 }
 
 .content__list {
+  position: relative;
+  overflow: scroll;
+  block-size: 298px;
+}
+
+.preloader-template {
+}
+
+.preloader {
+}
+
+.preloader-chasing-squares {
+}
+
+.square {
+}
+
+.cards-list-item-template {
+}
+
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color:#fff
+}
+
+.content__video-card { 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+}
+
+.content__video-card-description-container:nth-of-type{
+  margin: 6px;
+}
+
+.content__video-card-title {
+  color: #fff;
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+}
+
+.content__video-card-thumbnail {
   width: 194px;
   height: 103px;
+  flex-shrink: 0;
+}
+
+.more-button-template {
+}
+
+.more-button {
+}
+
+.error-template {
+}
+
+.error {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #545050;
+}
+
+.error__title {
+  color: #fff;
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
 }
