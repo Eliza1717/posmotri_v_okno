@@ -92,6 +92,10 @@ ol {
   outline-offset: 2px;
 }
 
+.search-form__textfield:active {
+  border: none;
+}
+
 .search-form__label:hover .search-form__label-text {
   cursor: pointer;
   text-decoration: underline;
